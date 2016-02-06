@@ -49,6 +49,23 @@
     <link rel="icon" type="image/png" href="images/favicon.png">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script>
+        $(document).ready(function () {
+
+            $(window).scroll(function () {
+                console.log($(window).scrollTop())
+                if ($(window).scrollTop() > 199) {
+                    $('#nav_bar').removeClass('navbar-transparent');
+                    $('#nav_bar').addClass('navbar-fixed');
+                }
+                if ($(window).scrollTop() > 50) {
+                    $('nav_bar').addClass('navbar-transparent');
+                }
+                if ($(window).scrollTop() < 200) {
+                    $('#nav_bar').removeClass('navbar-fixed');
+                }
+            });
+        });
+
         $(function () {
             $('a[href*=#]:not([href=#])').click(function () {
                 if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
@@ -70,7 +87,7 @@
 
 <!-- Primary Page Layout
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-<nav>
+<nav id="nav_bar">
     <ul>
         <li><a href="#overmij">Over Mij</a></li>
         <li><a href="#praktijk">Praktijk</a></li>
@@ -79,12 +96,13 @@
     </ul>
 </nav>
 
-<section>
+<section id="home" class="page">
 
     <div class="frontpage">
 
-        <h1 class="title">dr. <span class="big-letter">M</span>arcella <span class="big-letter">V</span>ande <span
-                class="big-letter">R</span>eyd</h1>
+        <h1 class="title"><img src="images/vogelkooi.png" width="81px"/> dr. <span class="big-letter">M</span>arcella
+            <span class="big-letter">V</span>ande <span
+                    class="big-letter">R</span>eyd</h1>
 
         <p class="psychiater">- Psychiater -</p>
 
@@ -92,13 +110,14 @@
 
     <div class="grid-container">
         <div class="grid-100">
-            <p class="afspraak-maken"><a class="button" href="#">Maak een afspraak</a></p>
+            <p class="afspraak-maken"><a class="button-big" href="#">Maak een afspraak</a></p>
+            
         </div>
     </div>
 
 </section>
 
-<section id="overmij">
+<section id="overmij" class="page">
     <div class="grid-container padding-top">
 
         <div class="prefix-50 grid-50">
@@ -131,7 +150,7 @@
 
 </section>
 
-<section id="praktijk">
+<section id="praktijk" class="page">
 
     <div class="container-praktijk padding-top">
         <div class="grid-container">
@@ -174,7 +193,7 @@
     </div>
 </section>
 
-<section id="afspraak">
+<section id="afspraak" class="page">
 
     <div class="container padding-top">
         <h1 class="section-title">Afspraak maken</h1>
@@ -192,7 +211,7 @@
     </div>
 </section>
 
-<section id="contact">
+<section id="contact" class="page">
     <div class="grid-container  padding-top">
         <div class="grid-100">
             <h1 class="section-title">Contact</h1>
@@ -201,13 +220,17 @@
         </div>
     </div>
 
-    <div class="grid-container">
-        <div class="grid-50">
+    <div class="">
+        <div class="grid-20 prefix-20">
+            <h2>Contactgegevens</h2>
+            <p>Ruime parking voor de deur.</p>
+            <p>Nabije bushalte Bokrijk Weg naar Domein 1-8-11-46 ( 5 minuten wandelen)</p>
+            <p>Nabije treinhalte (ipv treinstation) Bokrijk op de verbinding Hasselt-Genk ( 15 minuten wandelen)</p>
 
         </div>
-        <div class="grid-50">
+        <div class="grid-50 prefix-10">
             <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2513.5610718079743!2d5.40967535777281!3d50.95032995237337!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbe!4v1454626217877"
-                    width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
         </div>
     </div>
 
