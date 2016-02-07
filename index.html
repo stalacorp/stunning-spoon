@@ -18,7 +18,7 @@
     <!-- Basic Page Needs
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <meta charset="utf-8">
-    <title>Your page title here :)</title>
+    <title>dr. Marcella Vande Reyd</title>
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -42,11 +42,26 @@
           rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Josefin+Slab:400,100,100italic,300,300italic,400italic,600,600italic,700,700italic'
           rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,800italic,300italic,400italic,600,600italic,700,700italic,800'
+          rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,700italic,900,900italic'
+          rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,500,400italic,500italic,700,700italic,900,900italic'
+          rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Hind:400,300,500,600,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:700,400' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic' rel='stylesheet'
+          type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Noto+Sans:400,400italic,700,700italic' rel='stylesheet'
+          type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Quicksand:400,300,700' rel='stylesheet' type='text/css'>
 
 
     <!-- Favicon
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script>
         $(document).ready(function () {
@@ -56,12 +71,14 @@
                 if ($(window).scrollTop() > 199) {
                     $('#nav_bar').removeClass('navbar-transparent');
                     $('#nav_bar').addClass('navbar-fixed');
+                    $('.nav-left').removeClass('no-display');
                 }
                 if ($(window).scrollTop() > 50) {
                     $('nav_bar').addClass('navbar-transparent');
                 }
                 if ($(window).scrollTop() < 200) {
                     $('#nav_bar').removeClass('navbar-fixed');
+                    $('.nav-left').addClass('no-display');
                 }
             });
         });
@@ -80,6 +97,18 @@
                 }
             });
         });
+
+        $(window).on('resize', function () {
+            if (window.innerWidth > 1024) {
+                $('section').addClass('page');
+                $('.arrow').removeClass('no-display');
+
+            } else {
+                $('section').removeClass('page');
+                $('.arrow').addClass('no-display');
+            }
+        });
+
     </script>
 
 </head>
@@ -87,31 +116,63 @@
 
 <!-- Primary Page Layout
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-<nav id="nav_bar">
-    <ul>
-        <li><a href="#overmij">Over Mij</a></li>
-        <li><a href="#praktijk">Praktijk</a></li>
-        <li><a href="#afspraak">Afspraak</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
-</nav>
+
 
 <section id="home" class="page">
 
+    <nav id="nav_bar">
+        <ul>
+            <li class="nav-left no-display"><a href="#home">dr. Vande Reyd</a></li>
+            <li><a href="#overmij">Over Mij</a></li>
+            <li><a href="#praktijk">Praktijk</a></li>
+            <li><a href="#afspraak">Afspraak</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
     <div class="frontpage">
+        <div class="grid-container">
 
-        <h1 class="title"><img src="images/vogelkooi.png" width="81px"/> dr. <span class="big-letter">M</span>arcella
-            <span class="big-letter">V</span>ande <span
-                    class="big-letter">R</span>eyd</h1>
+            <div class="grid-100">
+                <h1 class="title"><img src="images/vogelkooi.png" width="81px" class="vogelkooi"/> dr. <span
+                        class="big-letter">M</span>arcella
+                    <span class="big-letter">V</span>ande <span
+                            class="big-letter">R</span>eyd</h1>
+            </div>
+        </div>
 
-        <p class="psychiater">- Psychiater -</p>
+        <div class="grid-container">
+            <div class="grid-20 prefix-40">
+                <p class="psychiater">- Psychiater -</p>
+            </div>
+        </div>
+        <div class="grid-container">
+
+            <div class="grid-30 prefix-60">
+                <p class="quote">“Men zegt dat we allen zoeken naar een betekenis van het leven. Maar ik denk dat het
+                    dat
+                    niet is wat we
+                    werkelijk zoeken. Ik denk dat we zoeken naar de ervaring dat we leven …”</p>
+
+                <p class="quote"> - Joseph Campbell</p>
+            </div>
+        </div>
+
 
     </div>
 
     <div class="grid-container">
         <div class="grid-100">
             <p class="afspraak-maken"><a class="button-big" href="#">Maak een afspraak</a></p>
-            
+
+        </div>
+    </div>
+
+    <div class="grid-container padding-top-1">
+        <div class="grid-20 prefix-40">
+            <a href="#overmij">
+                <div class="arrow element-animation"></div>
+            </a>
         </div>
     </div>
 
@@ -130,7 +191,7 @@
 
     <div class="grid-container">
         <div class="prefix-10 grid-20">
-            <img src="images/photo_marcella.jpg" width="250px"/>
+            <p><img src="images/photo_marcella.jpg" width="250px" class="pasfoto"/></p>
         </div>
         <div class="grid-40 prefix-25">
 
@@ -160,33 +221,34 @@
             </div>
         </div>
         <div class="grid-container">
-            <div class="grid-33">
+            <div class="grid-30">
                 <h3><span class="icon-Business-ManWoman icon"></span></h3>
                 <p>U kan terecht als u het gevoel heeft vast te lopen, door depressieve of angst klachten, door stress
                     of burn out, of een andere situatie waarin u wel de verantwoordelijk kan nemen over uzelf maar uw
                     leven niet ten volle kan leven. De doelgroep beperkt zich tot volwassenen. </p>
             </div>
-            <div class="grid-33">
+            <div class="grid-30 prefix-5">
                 <h3><span class="icon-Speach-Bubbles icon"></span></h3>
 
                 <p>
-                    De gesprekken verlopen in een niet-oordelende sfeer , met de intentie van diep luisteren en een
-                    frisse blik.
+                    Ik hecht er veel waarde aan te luisteren zonder een oordeel te vellen, en te kijken met een frisse
+                    blik.</p>
 
-                    Raadpleging omvat onderzoek, diagnostiek en eventueel medicatie advies. Begeleiding is gegrond in
-                    mindfulness om een groter gewaarzijn en zelfkennis te voeden bij de client(e).
+                <p>Raadpleging omvat onderzoek, diagnostiek, begeleiding en zo nodig medicatie-advies. De begeleiding
+                    is gegrond in mindfulness om tot een groter gewaarzijn en zelfkennis te komen.
+                    Al wandelende praat u misschien met groter gemak. U kan hierom vragen.</p>
 
-                    Zelf trainen in mindfulness vaardigheden behoort tot de opties .( be-mindful.be )
-
-                    Al wandelende praat u misschien met een groter gemak. U kan hierom vragen.</p>
+                <p>Zelf trainen in mindfulness vaardigheden behoort tot de opties. Dit aanbod vindt u op <a
+                        href="http://www.be-mindful.be">www.be-mindful.be</a>
+                </p>
             </div>
-            <div class="grid-33">
+            <div class="grid-30 prefix-5">
                 <h3><span class="icon-Wallet icon"></span></h3>
 
-                <p>Tarieven zoals vastgesteld in de conventie met de ziekenfondsen zijn van toepassing zolang de
-                    raadpleging ook aan deze voorwaarden voldoet..
+                <p>Tarieven zoals vastgesteld in de conventie met de ziekenfondsen zijn van toepassing, zolang ook de
+                    raadpleging maximaal 45 minuten duurt.</p>
 
-                    Er is geen betaling met bancontact mogelijk.</p>
+                <p>Betaling met bancontact is <u>niet</u> mogelijk.</p>
             </div>
         </div>
 
@@ -223,6 +285,14 @@
     <div class="">
         <div class="grid-20 prefix-20">
             <h2>Contactgegevens</h2>
+            <ul>
+                <li>dr. Marcella Vande Reyd</li>
+                <li>Godsheidestraat 5</li>
+                <li>3600 Genk</li>
+                <li>011 26 10 37</li>
+                <li><a href="mailto:marcella.vandereyd@skynet.be">marcella.vandereyd@skynet.be</a></li>
+            </ul>
+
             <p>Ruime parking voor de deur.</p>
             <p>Nabije bushalte Bokrijk Weg naar Domein 1-8-11-46 ( 5 minuten wandelen)</p>
             <p>Nabije treinhalte (ipv treinstation) Bokrijk op de verbinding Hasselt-Genk ( 15 minuten wandelen)</p>
